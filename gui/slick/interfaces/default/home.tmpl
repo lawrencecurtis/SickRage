@@ -95,8 +95,7 @@
         },
 		widgetOptions : {
             filter_columnFilters: false,
-			filter_saveFilters : true,
-			filter_reset: '.reset'
+			filter_reset: '.resetshows'
 		},
         sortStable: true
     });
@@ -117,8 +116,7 @@
         },
 		widgetOptions : {
             filter_columnFilters: false,
-			filter_saveFilters : true,
-			filter_reset: '.reset'
+			filter_reset: '.resetanime'
 		},
         sortStable: true
     });
@@ -224,6 +222,11 @@
 	#end if
 </div>
 
+#if $layout != 'poster':
+<div class="pull-right">
+	<input class="search form-control form-control-inline input-sm input200" type="search" data-column="1" placeholder="Search Show Name"> <button type="button" class="resetshows resetanime btn btn-inline">Reset Search</button>
+</div>
+#end if
 
 #for $curShowlist in $showlists:
 #set $curListType = $curShowlist[0]
@@ -403,10 +406,6 @@ $myShowList.sort(lambda x, y: cmp(x.name, y.name))
 </div> 
 
 #else
-
-<div class="pull-right">
-	<input class="search form-control form-control-inline input-sm input200" type="search" data-column="1" placeholder="Search Show Name"> <button type="button" class="reset btn btn-inline">Reset Search</button>
-</div>
 
 <table id="showListTable$curListType" class="tablesorter" cellspacing="1" border="0" cellpadding="0">
 
