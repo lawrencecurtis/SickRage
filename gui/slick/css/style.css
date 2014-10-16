@@ -1451,6 +1451,42 @@ td.tableright {
 	text-align: left;
 }
 
+.optionWrapper {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6px 12px;
+}
+
+.optionWrapper span.selectTitle {
+	float: left;
+	text-align: left;
+	vertical-align: middle;
+	width: 225px;
+	padding: 6px 0px;
+}
+
+.optionWrapper div.selectChoices {
+	float: left;
+	width: 175px;
+	margin-left: 25px;
+}
+
+.optionWrapper br {
+	clear: both;
+}
+
+.manageCustom {
+	text-align: center;
+	padding: 6px;
+	margin-left: 25px;
+}
+
+.separator {
+	font-size: 90%;
+	color: #333333;
+}
+
 a.whitelink {
 
 }
