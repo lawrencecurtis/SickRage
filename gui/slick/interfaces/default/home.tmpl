@@ -127,7 +127,10 @@
     });
 
 	\$.tablesorter.filter.bindSearch( "#showListTableShows", \$('.search') );
+	
+	#if $sickbeard.ANIME_SPLIT_HOME:
 	\$.tablesorter.filter.bindSearch( "#showListTableAnime", \$('.search') );
+	#end if
 	
     #set $fuzzydate = 'airdate'
     #if $sickbeard.FUZZY_DATING:
