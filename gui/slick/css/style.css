@@ -445,7 +445,7 @@ home.tmpl
 .show {
     margin: 12px;
 	width: 188px;
-	height: 324px;
+	height: 352px;
 	background-color: #DFDACF;
 	border: 1px solid #111;
 	border-radius: 6px;
@@ -507,7 +507,7 @@ home.tmpl
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
-	font-size: 12px;
+	font-size: 11px;
 	margin: 4px 4px 0px 4px;
 }
 
@@ -526,27 +526,45 @@ home.tmpl
 	background-image: linear-gradient(to left, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
 }
 
-.show-add {
-
+.show-date {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
 	font-size: 11px;
-	text-align: left;
-	display: block;
+	margin: 0px 4px 4px 4px;
 }
 
-.show-date {
+.show-date:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	top: 0; 
+	right: 0;
+	background-image: -webkit-linear-gradient(right, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
+	background-image: -moz-linear-gradient(right, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
+	background-image: -ms-linear-gradient(right, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
+	background-image: -o-linear-gradient(right, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
+	background-image: linear-gradient(to left, rgba(223, 218, 207, 1), rgba(223, 218, 207, 0));
+}
 
+.show-table {	
+	text-align:center; 
+	vertical-align:middle;
+	width: 33%
+}
+
+.show-add {
 	font-size: 11px;
 	text-align: left;
 	display: block;
-	line-height: 18px;
 }
 
 .show-status {
-
 	font-size: 11px;
 	text-align: left;
 	display: block;
-	line-height: 34px;
 }
 
 .show-network-image {
@@ -555,11 +573,17 @@ home.tmpl
 }
 
 .show-dlstats {
+	font-size: 11px;
+	text-align: left;
+	display: block;
+	margin-left: 4px;
+}
 
+.show-quality {
 	font-size: 11px;
 	text-align: right;
 	display: block;
-	line-height: 18px;
+	margin-right: 4px;
 }
 
 #sort-by {
