@@ -56,7 +56,12 @@
     format: function(s) {
         if (s.indexOf('Loading...') == 0)
           return s.replace('Loading...','000');
-        return (s || '').replace(/^(The|A)\s/i,'');
+		else
+		#if not $sickbeard.SORT_ARTICLE:
+			return (s || '').replace(/^(The|A|An)\s/i,'');
+		#else:
+			return (s || '');
+		#end if	
     },
     type: 'text'
 });
@@ -148,7 +153,14 @@
 				isFitWidth: true
 			},
 			getSortData: {
-				name: '[data-name]',
+				name: function( itemElem ) { 
+					var name = \$( itemElem ).attr('data-name');
+					#if not $sickbeard.SORT_ARTICLE:
+						return (name || '').replace(/^(The|A|An)\s/i,'');
+					#else:
+						return (name || '');
+					#end if	
+				},
 				network: '[data-network]',
 				date: function( itemElem ) { 
 					var date = \$( itemElem ).attr('data-date');
@@ -304,7 +316,7 @@ $myShowList.sort(lambda x, y: cmp(x.name, y.name))
         #set $den = 1
     #end if
 
-#set $progressbar_percent = $nom * 100 / $den
+	#set $progressbar_percent = $nom * 100 / $den
 	
 	#if "a" in sickbeard.DATE_PRESET:
 		#set $showheight = "344px"
