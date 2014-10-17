@@ -43,9 +43,8 @@ html > body .ui-pnotify {
 	  padding: 7px 10px;
 	  text-align: center;
 	  min-height: 22px;
-	  width: 250px;
 	  z-index: 9999;
-	  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	  font-family: "Open Sans", "Trebuchet MS", Helvetica, Arial, sans-serif;
 	  line-height: normal;
 	  filter: alpha(opacity=85);
 	  -moz-opacity: 0.8 !important;
@@ -62,13 +61,13 @@ html > body .ui-pnotify {
 	background: none;
 	font-size: 14px;
 	font-weight: bold;
-	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Trebuchet MS", Helvetica, Arial, sans-serif;
 	line-height: normal;
 }
 .ui-pnotify-text {
 	display: block;
 	 font-size: 14px;
-	 font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	 font-family: "Open Sans", "Trebuchet MS", Helvetica, Arial, sans-serif;
 	 line-height: normal;
 }
 .ui-pnotify-icon, .ui-pnotify-icon span {
