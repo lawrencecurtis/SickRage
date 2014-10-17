@@ -1192,6 +1192,19 @@ h2.day, h2.network {
 	vertical-align: middle;
 }
 
+.calendarWrapper {
+	width:1000px; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.calendarTable {
+	float: left;
+	width: 140px !important;
+	white-space: nowrap; 
+	table-layout: fixed;
+}
+
 .calendarPoster {
 	width: 130px;
 	height: auto;
@@ -1201,12 +1214,17 @@ h2.day, h2.network {
 }
 
 .calendarShow {
-	overflow: hidden; 
-	text-overflow: ellipsis;  
-	font-size: 12px;  
 	border-left: 1px solid #ccc !important;
 	border-right: 1px solid #ccc !important;
 	border-bottom: 1px solid #ccc !important;
+}
+
+.calendarShowStatus {
+	padding:0 5px 10px 5px;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	display:block;
+	font-size: 11px;
 }
 
 /* =======================================================================
