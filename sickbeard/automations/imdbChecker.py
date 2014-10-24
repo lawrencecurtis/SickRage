@@ -157,7 +157,7 @@ class IMDB(ImdbBase):
             if watchlistShow['imdbid'] not in [x.imdbid for x in sickbeard.showList ]:
                 TvdbShow = tvdb_instance.search('',imdbid=watchlistShow['imdbid'])
                 if TvdbShow:
-                    self._addDefaultShow(1, TvdbShow['id'], TvdbShow['seriesname'], False)
+                    self._addDefaultShow(1, TvdbShow['id'], TvdbShow['seriesname'], int(sickbeard.STATUS_DEFAULT))
                     nrOfaddedShows += 1
 
         return nrOfaddedShows if nrOfaddedShows > 0 else False
